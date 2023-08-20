@@ -34,5 +34,5 @@ jobs:
         run: |
           docker pull registry.k8s.io/metrics-server/metrics-server:v0.6.3
           docker login --username=zh1390113493 --password="zh20121150" registry.cn-hangzhou.aliyuncs.com
-          docker tag metrics-server:v0.6.3 registry.cn-hangzhou.aliyuncs.com/huii_space/huii_space:0.6.3
+          docker tag registry.k8s.io/metrics-server/metrics-server:v0.6.3 registry.cn-hangzhou.aliyuncs.com/huii_space/huii_space:0.6.3
           docker push registry.cn-hangzhou.aliyuncs.com/huii_space/huii_space:0.6.3
