@@ -33,6 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           docker pull registry.k8s.io/metrics-server/metrics-server:v0.6.3
-          docker login --username=${{ secret.USR }} --password=${{ secret.PSW }}  registry.cn-hangzhou.aliyuncs.com
+          docker login --username=${{ secrets.USR }} --password=${{ secrets.PSW }}  registry.cn-hangzhou.aliyuncs.com
           docker tag registry.k8s.io/metrics-server/metrics-server:v0.6.3 registry.cn-hangzhou.aliyuncs.com/huii_space/huii_space:0.6.3
           docker push registry.cn-hangzhou.aliyuncs.com/huii_space/huii_space:0.6.3
